@@ -35,6 +35,7 @@
 // one configuration file by placing their specific defaults and pin map at the bottom of this file.
 // If doing so, simply comment out these two defines and see instructions below.
 #define DEFAULTS_GENERIC
+#define DEFAULTS_ABC_AXIS
 #define CPU_MAP_2560_INITIAL
 
 // Serial baud rate
@@ -105,6 +106,9 @@
 #define HOMING_CYCLE_0 (1<<Z_AXIS)                // REQUIRED: First move Z to clear workspace.
 #define HOMING_CYCLE_1 ((1<<X_AXIS)|(1<<Y_AXIS))  // OPTIONAL: Then move X,Y at the same time.
 // #define HOMING_CYCLE_2                         // OPTIONAL: Uncomment and add axes mask to enable
+// #define HOMING_CYCLE_3                         // OPTIONAL: Uncomment and add axes mask to enable
+// #define HOMING_CYCLE_4                         // OPTIONAL: Uncomment and add axes mask to enable
+// #define HOMING_CYCLE_5                         // OPTIONAL: Uncomment and add axes mask to enable
 
 // NOTE: The following are two examples to setup homing for 2-axis machines.
 // #define HOMING_CYCLE_0 ((1<<X_AXIS)|(1<<Y_AXIS))  // NOT COMPATIBLE WITH COREXY: Homes both X-Y in one cycle. 
