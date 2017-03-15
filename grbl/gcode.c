@@ -528,6 +528,7 @@ uint8_t gc_execute_line(char *line)
       else { coord_select = gc_block.modal.coord_select; } // Index P0 as the active coordinate system
       
       // NOTE: Store parameter data in IJK values. By rule, they are not in use with this command.
+      // FIXME: Instead of IJK, we'd better use: float vector[N_AXIS]; // [DG]
       if (!settings_read_coord_data(coord_select,gc_block.values.ijk)) { FAIL(STATUS_SETTING_READ_FAIL); } // [EEPROM read fail]
 
       // Pre-calculate the coordinate data changes.
