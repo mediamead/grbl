@@ -350,6 +350,9 @@ ISR(TIMER1_COMPA_vect)
 
         // Initialize Bresenham line and distance counters
         st.counter_x = st.counter_y = st.counter_z = (st.exec_block->step_event_count >> 1);
+#ifdef A_AXIS
+        st.counter_a = st.counter_x;
+#endif
       }
       st.dir_outbits = st.exec_block->direction_bits ^ dir_port_invert_mask;
 
